@@ -21,13 +21,9 @@ umsg32 receivek(void)
 	}
 
 	msg = prptr->messages[0];   /* retrieve message            */
-
-	if (prptr->nextMsgIndex == NMSG)
-	{
-		prptr->nextMsgIndex--;
-		shiftMessages(prptr, prptr->nextMsgIndex++);
-	}
+	prptr->nextMsgIndex--;
 	prptr->msgcounter--;
+	shiftMessages(prptr, prptr->msgcounter);
 
 	prptr->prhasmsg = FALSE;    /* reset message flag         */
 	restore(mask);

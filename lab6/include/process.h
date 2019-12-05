@@ -1,4 +1,3 @@
-cat include/process.h
 /* process.h - isbadpid */
 
 #define NMSG            5      /* max number messages to be handled   */
@@ -7,7 +6,7 @@ cat include/process.h
 
 #ifndef NPROC
 #define	NPROC		8
-#endif		
+#endif
 
 /* Process state constants */
 
